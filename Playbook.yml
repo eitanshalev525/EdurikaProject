@@ -1,0 +1,15 @@
+---
+- hosts: Slaves
+    become: true
+    become_user: root
+    tasks:
+    - name: install docker
+      apt-get: name=docker state=present
+    - name: start docker
+      service: name=docker state=started
+    - name: pull devopsedu image
+      docker_image:
+          name: devopsedu/webapp
+          source: pull
+    - name: run Image
+      command: docker run -itd -P devopsedu/webapp:ansible
