@@ -17,8 +17,8 @@
 
 # Ex 2: A collection of hosts belonging to the 'webservers' group
 [Slaves]
-172.31.31.186
-172.31.28.19
+172.31.21.194
+172.31.35.212
 #[webservers]
 #alpha.example.org
 #beta.example.org
