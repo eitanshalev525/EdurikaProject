@@ -13,4 +13,4 @@
         name: devopsedu/webapp
         source: pull
   - name: run Image
-    command: docker run -itd -P devopsedu/webapp
+    command: docker run -itd -p 8888:80 devopsedu/webapp
